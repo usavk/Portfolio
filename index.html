@@ -1,33 +1,196 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: #f4f4f9;
+    }
+
+    /* Navbar Styles */
+    nav {
+      background-color: #333;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Section Styles */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .intro {
+      background-color: #e0f7fa;
+    }
+
+    .skills {
+      background-color: #b2dfdb;
+    }
+
+    .projects {
+      background-color: #80cbc4;
+    }
+
+    .contact {
+      background-color: #4db6ac;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    /* Button Styles */
+    .btn {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #555;
+    }
+
+    /* Form Styles */
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    form button {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form button:hover {
+      background-color: #555;
+    }
+
+    /* Smooth Scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+  </style>
 </head>
 <body>
-<div id="myDIV" class="header">
-  <h2>My To Do List</h2>
-  <input type="text" id="myInput" placeholder="Title...">
-  <span onclick="newElement()" class="addBtn">Add</span>
-</div>
 
-<ul id="myUL">
-  <li>Hit the gym</li>
-  <li class="checked">Pay bills</li>
-  <li>Meet George</li>
-  <li>Buy eggs</li>
-  <li>Read a book</li>
-  <li>Organize office</li>
-</ul>
-<p>hello</p>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="#intro">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <div id="intro" class="section intro">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Hi, I'm a web developer passionate about coding and building things.</p>
+    <button class="btn" onclick="alert('Thank you for visiting!')">Say Hello</button>
+  </div>
+
+  <!-- Skills Section -->
+  <div id="skills" class="section skills">
+    <h2>Skills</h2>
+    <p>Here are some technologies I'm proficient in:</p>
+    <ul>
+      <li>HTML, CSS, JavaScript</li>
+      <li>React.js, Node.js</li>
+      <li>Git, GitHub</li>
+      <li>Python, Django</li>
+      <li>Database Management (SQL & NoSQL)</li>
+    </ul>
+  </div>
+
+  <!-- Projects Section -->
+  <div id="projects" class="section projects">
+    <h2>Projects</h2>
+    <p>Here are some of the projects I have worked on:</p>
+    <ul>
+      <li><strong>Portfolio Website</strong> - A personal website built using HTML, CSS, and JavaScript.</li>
+      <li><strong>To-Do App</strong> - A task manager application built with React.js and Node.js.</li>
+      <li><strong>Weather App</strong> - A weather forecasting app using a third-party API for real-time weather data.</li>
+    </ul>
+  </div>
+
+  <!-- Contact Section -->
+  <div id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to send me a message:</p>
+    <form id="contactForm">
+      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    // JavaScript to handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      if (name && email && message) {
+        alert(`Message sent! \nName: ${name} \nEmail: ${email} \nMessage: ${message}`);
+        // You can replace this with actual backend logic to send the message
+      } else {
+        alert("Please fill out all fields.");
+      }
+    });
+  </script>
+
 </body>
-<script>
-function newElement() {
-	var li= document.createElement("li");
-	var tex = document.getElementById('myInput').value;
-	var t=document.createTextNode(tex);
-	li.appendChild(t);
-	document.getElementById("myUL").appendChild(li);
-}
-</script>
 </html>
