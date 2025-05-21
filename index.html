@@ -1,196 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      background-color: #f4f4f9;
-    }
-
-    /* Navbar Styles */
-    nav {
-      background-color: #333;
-      padding: 10px 20px;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 100;
-    }
-
-    nav ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-    }
-
-    nav ul li {
-      margin: 0 20px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-    }
-
-    nav ul li a:hover {
-      text-decoration: underline;
-    }
-
-    /* Main Section Styles */
-    .section {
-      padding: 80px 20px;
-      text-align: center;
-      min-height: 100vh;
-    }
-
-    .intro {
-      background-color: #e0f7fa;
-    }
-
-    .skills {
-      background-color: #b2dfdb;
-    }
-
-    .projects {
-      background-color: #80cbc4;
-    }
-
-    .contact {
-      background-color: #4db6ac;
-    }
-
-    h1, h2 {
-      color: #333;
-    }
-
-    /* Button Styles */
-    .btn {
-      background-color: #333;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #555;
-    }
-
-    /* Form Styles */
-    form input, form textarea {
-      width: 80%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-
-    form button {
-      background-color: #333;
-      color: white;
-      border: none;
-      padding: 12px 30px;
-      cursor: pointer;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    form button:hover {
-      background-color: #555;
-    }
-
-    /* Smooth Scroll */
-    html {
-      scroll-behavior: smooth;
-    }
-
-  </style>
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#intro">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Home Section -->
-  <div id="intro" class="section intro">
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm a web developer passionate about coding and building things.</p>
-    <button class="btn" onclick="alert('Thank you for visiting!')">Say Hello</button>
-  </div>
-
-  <!-- Skills Section -->
-  <div id="skills" class="section skills">
-    <h2>Skills</h2>
-    <p>Here are some technologies I'm proficient in:</p>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>React.js, Node.js</li>
-      <li>Git, GitHub</li>
-      <li>Python, Django</li>
-      <li>Database Management (SQL & NoSQL)</li>
-    </ul>
-  </div>
-
-  <!-- Projects Section -->
-  <div id="projects" class="section projects">
-    <h2>Projects</h2>
-    <p>Here are some of the projects I have worked on:</p>
-    <ul>
-      <li><strong>Portfolio Website</strong> - A personal website built using HTML, CSS, and JavaScript.</li>
-      <li><strong>To-Do App</strong> - A task manager application built with React.js and Node.js.</li>
-      <li><strong>Weather App</strong> - A weather forecasting app using a third-party API for real-time weather data.</li>
-    </ul>
-  </div>
-
-  <!-- Contact Section -->
-  <div id="contact" class="section contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to get in touch, feel free to send me a message:</p>
-    <form id="contactForm">
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-
-  <script>
-    // JavaScript to handle form submission
-    document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      if (name && email && message) {
-        alert(`Message sent! \nName: ${name} \nEmail: ${email} \nMessage: ${message}`);
-        // You can replace this with actual backend logic to send the message
-      } else {
-        alert("Please fill out all fields.");
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Kiladi Vasu</title>
+    <meta name="description" content="Kiladi Vasu is a software engineer who builds accessible, inclusive products and digital experiences for the web." />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+      /* Your custom CSS */
+      body {
+        background-color: #0a192f;
+        display: flex;
+color: white;
       }
-    });
-  </script>
 
-</body>
+.projects li {
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+    </style>
+  </head>
+
+  <body class="bg-slate-900 text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900">
+    <div class="min-h-screen max-w-screen-xl mx-auto px-6 py-12 md:px-12 md:py-16 lg:flex lg:justify-between">
+      <!-- Sidebar -->
+      <header class="lg:sticky lg:top-0 lg:w-1/2 lg:py-24">
+        <div>
+          <h1 class="text-4xl font-bold text-slate-200 sm:text-5xl"><a href="/">Kiladi Vasu</a></h1>
+          <h2 class="mt-3 text-lg text-slate-200 sm:text-xl">Tech Enthusiast</h2>
+          <p class="mt-4 max-w-xs leading-normal">I build accessible, pixel-perfect digital experiences for the web.</p>
+          
+          <nav class="hidden lg:block mt-16">
+            <ul class="space-y-3">
+              <li>
+                <a href="#about" class="group flex items-center">
+                  <span class="mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 transition-all"></span>
+                  <span class="text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">About</span>
+                </a>
+              </li>
+              <li>
+                <a href="#experience" class="group flex items-center">
+                  <span class="mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 transition-all"></span>
+                  <span class="text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Experience</span>
+                </a>
+              </li>
+              <li>
+                <a href="#projects" class="group flex items-center">
+                  <span class="mr-4 h-px w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 transition-all"></span>
+                  <span class="text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-slate-200">Projects</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Social -->
+        <ul class="mt-8 flex space-x-5" aria-label="Social media">
+          <li>
+            <a href="https://github.com/usavk" target="_blank" class="text-slate-400 hover:text-slate-200" aria-label="GitHub">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.28 3.438 9.75 8.205 11.325.6.113.82-.263.82-.583 0-.288-.01-1.05-.015-2.06-3.338.725-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.805 1.305 3.49.997.11-.775.42-1.305.76-1.605-2.665-.3-5.465-1.333-5.465-5.93 0-1.31.465-2.38 1.235-3.22-.125-.303-.535-1.523.115-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.655 1.653.245 2.873.12 3.176.77.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.37.82 1.102.82 2.222 0 1.606-.015 2.903-.015 3.293 0 .322.21.7.825.582C20.565 22.25 24 17.78 24 12.5 24 5.87 18.63.5 12 .5z"/>
+              </svg>
+            </a>
+          </li>
+<li>
+  <a href="https://www.linkedin.com/in/vasu-kiladi/" target="_blank" class="text-white hover:text-white" aria-label="LinkedIn">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.3c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.79 1.75-1.75 1.75zm13.5 11.3h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.75 1.38-1.54 2.84-1.54 3.04 0 3.6 2 3.6 4.59v5.58z"/>
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://www.instagram.com/mr_killadi_2711/" target="_blank" class="text-white hover:text-white" aria-label="Instagram">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.055 1.98.24 2.44.41a4.92 4.92 0 0 1 1.77 1.03c.494.494.828 1.06 1.03 1.77.17.46.355 1.27.41 2.44.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.24 1.98-.41 2.44a4.92 4.92 0 0 1-1.03 1.77 4.92 4.92 0 0 1-1.77 1.03c-.46.17-1.27.355-2.44.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.98-.24-2.44-.41a4.92 4.92 0 0 1-1.77-1.03 4.92 4.92 0 0 1-1.03-1.77c-.17-.46-.355-1.27-.41-2.44-.058-1.266-.07-1.65-.07-4.85s.012-3.584.07-4.85c.055-1.17.24-1.98.41-2.44a4.92 4.92 0 0 1 1.03-1.77 4.92 4.92 0 0 1 1.77-1.03c.46-.17 1.27-.355 2.44-.41C8.416 2.212 8.8 2.2 12 2.2zm0 1.8c-3.13 0-3.493.012-4.72.068-1.01.047-1.558.215-1.92.357-.483.19-.827.42-1.19.78a3.155 3.155 0 0 0-.78 1.19c-.142.362-.31.91-.357 1.92-.056 1.227-.068 1.59-.068 4.72s.012 3.493.068 4.72c.047 1.01.215 1.558.357 1.92.19.483.42.827.78 1.19.362.36.707.59 1.19.78.362.142.91.31 1.92.357 1.227.056 1.59.068 4.72.068s3.493-.012 4.72-.068c1.01-.047 1.558-.215 1.92-.357.483-.19.827-.42 1.19-.78.36-.362.59-.707.78-1.19.142-.362.31-.91.357-1.92.056-1.227.068-1.59.068-4.72s-.012-3.493-.068-4.72c-.047-1.01-.215-1.558-.357-1.92a3.155 3.155 0 0 0-.78-1.19 3.155 3.155 0 0 0-1.19-.78c-.362-.142-.91-.31-1.92-.357-1.227-.056-1.59-.068-4.72-.068zm0 3.6a6.2 6.2 0 1 1 0 12.4 6.2 6.2 0 0 1 0-12.4zm0 1.8a4.4 4.4 0 1 0 0 8.8 4.4 4.4 0 0 0 0-8.8zm6.4-.9a1.44 1.44 0 1 1 0 2.88 1.44 1.44 0 0 1 0-2.88z"/>
+    </svg>
+  </a>
+</li>
+
+<li>
+  <a href="https://x.com/vkiladi" target="_blank" class="text-white hover:text-white" aria-label="Twitter">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.949.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-2.72 0-4.924 2.204-4.924 4.924 0 .39.045.765.127 1.124-4.094-.205-7.725-2.166-10.158-5.144-.424.724-.666 1.562-.666 2.475 0 1.708.869 3.216 2.188 4.099-.807-.026-1.566-.247-2.228-.616v.062c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.085.631 1.953 2.445 3.376 4.6 3.415-1.68 1.318-3.809 2.103-6.102 2.103-.395 0-.779-.023-1.17-.067 2.179 1.397 4.768 2.212 7.557 2.212 9.054 0 14-7.496 14-13.986 0-.21-.005-.42-.015-.63.962-.695 1.8-1.562 2.46-2.548l-.047-.02z"/>
+    </svg>
+  </a>
+</li>
+<li>
+  <a href="https://linktr.ee/vasukiladi" target="_blank" class="text-slate-400 hover:text-slate-200" aria-label="Linktree">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M12 2.25a.75.75 0 0 1 .75.75v5.25h2.25l-3 3-3-3H11.25V3a.75.75 0 0 1 .75-.75zm0 19.5a.75.75 0 0 1-.75-.75v-5.25H9l3-3 3 3h-2.25V21a.75.75 0 0 1-.75.75zm7.03-12.78a.75.75 0 0 1 0 1.06l-3.72 3.72 3.72 3.72a.75.75 0 0 1-1.06 1.06L14.25 14.25l-3.72 3.72a.75.75 0 0 1-1.06-1.06l3.72-3.72-3.72-3.72a.75.75 0 0 1 1.06-1.06l3.72 3.72 3.72-3.72a.75.75 0 0 1 1.06 0z"/>
+    </svg>
+  </a>
+</li>
+
+        </ul>
+      </header>
+
+      <!-- Main Content -->
+      <main id="content" class="lg:w-1/2 lg:py-24">
+        <section id="about" class="mb-24">
+          <h2 class="text-3xl font-bold text-slate-200">About Me</h2>
+          <p class="mt-4">I'm a front-end engineer who enjoys building web interfaces that are fast, accessible, and user-friendly. I love working with React and modern UI frameworks.</p>
+        </section>
+
+        <section id="experience" class="mb-24">
+          <h2 class="text-3xl font-bold text-slate-200">Experience</h2>
+          <p class="mt-4">Experience at companies like Apple, building robust design systems and delightful user experiences.</p>
+<ul>
+        <li><strong>SDE Intern</strong>, Kaizentric (2024 – Present)</li>
+      </ul>
+        </section>
+
+        <section id="projects">
+          <h2 class="text-3xl font-bold text-slate-200">Projects</h2>
+          <p class="mt-4">Projects like portfolio sites, web apps, and open source contributions.</p>
+<ul class="space-y-5 leading-relaxed">
+        <li>
+    <strong>Hospital Management System:</strong> A comprehensive web application for managing patient appointments, doctor scheduling, and financial accounts. Built using React for the frontend and Express for the backend.
+  </li>
+  <li>
+    <strong>WeWork Booking Platform:</strong> A workspace management system that allows professionals to book desks, meeting rooms, and coworking spaces. Focused on real-time availability and user-friendly scheduling.
+  </li>
+  <li>
+    <strong>CTArtFix:</strong> A deep learning-powered application designed to detect and classify artifacts in CT scan images. Assists radiologists in identifying image distortions and improving diagnostic accuracy.
+  </li>
+      </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
